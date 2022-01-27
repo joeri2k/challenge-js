@@ -48,7 +48,6 @@ function PatternFunction() {
 // ----------- In Game Function ----------------
 var counter = 0;
 function GameFunction(event) {
-  console.log(pattern[counter].id);
   if (event.srcElement.id == pattern[counter].id) {
     if (counter == pattern.length - 1) {
       level_count += 1;

@@ -6,6 +6,7 @@ var red = $("#red");
 var yellow = $("#yellow");
 var blue = $("#blue");
 var container = $(".container");
+console.log(container);
 var colors = [green, red, yellow, blue];
 var pattern = [];
 // Audio
@@ -43,7 +44,6 @@ function PatternFunction() {
     colors[random_number].removeClass("pressed");
   }, 150);
   console.log(container[0]);
-  console.log($(".container"));
   container[0].addEventListener("click", GameFunction);
 }
 
@@ -68,3 +68,33 @@ function GameFunction(event) {
     window.location.reload();
   }
 }
+
+// -----------On click functions for each button-------
+green.on("click", function () {
+  green.addClass("pressed");
+  green_audio.play();
+  setTimeout(function () {
+    green.removeClass("pressed");
+  }, 150);
+});
+red.on("click", function () {
+  red.addClass("pressed");
+  red_audio.play();
+  setTimeout(function () {
+    red.removeClass("pressed");
+  }, 150);
+});
+yellow.on("click", function () {
+  yellow.addClass("pressed");
+  yellow_audio.play();
+  setTimeout(function () {
+    yellow.removeClass("pressed");
+  }, 150);
+});
+blue.on("click", function () {
+  blue.addClass("pressed");
+  blue_audio.play();
+  setTimeout(function () {
+    blue.removeClass("pressed");
+  }, 150);
+});
