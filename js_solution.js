@@ -1,4 +1,3 @@
-var game = false;
 var title_msg = document.getElementById("title");
 var level_count = 1;
 var green = document.getElementById("green");
@@ -15,10 +14,9 @@ var blue_audio = new Audio("./sounds/blue.mp3");
 var lost_audio = new Audio("./sounds/wrong.mp3");
 
 document.addEventListener("keydown", function (event) {
-  if (event.key && game == false) {
+  if (event.key) {
     title_msg.innerHTML = "Level " + level_count;
     console.log("test");
-    game = true;
     PatternFunction();
   }
 });
@@ -58,7 +56,7 @@ function GameFunction(event) {
     }
   } else {
     lost_audio.play();
-    alert("Wrong!!");
+    alert("You Lost!");
     window.location.reload();
   }
 }
