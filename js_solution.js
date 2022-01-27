@@ -1,3 +1,4 @@
+var game = false;
 var title_msg = document.getElementById("title");
 var level_count = 1;
 var green = document.getElementById("green");
@@ -7,6 +8,7 @@ var blue = document.getElementById("blue");
 var container = document.getElementsByClassName("container");
 var colors = [green, red, yellow, blue];
 var pattern = [];
+// Audio
 var green_audio = new Audio("./sounds/green.mp3");
 var red_audio = new Audio("./sounds/red.mp3");
 var yellow_audio = new Audio("./sounds/yellow.mp3");
@@ -15,9 +17,10 @@ var lost_audio = new Audio("./sounds/wrong.mp3");
 
 // ------------ Start on keydown ------------------
 document.addEventListener("keydown", function (event) {
-  if (event.key) {
+  if (event.key && game == false) {
     title_msg.innerHTML = "Level " + level_count;
     console.log("test");
+    game = true;
     PatternFunction();
   }
 });
@@ -45,6 +48,7 @@ function PatternFunction() {
 // ----------- In Game Function ----------------
 var counter = 0;
 function GameFunction(event) {
+  console.log(pattern[counter].id);
   if (event.srcElement.id == pattern[counter].id) {
     if (counter == pattern.length - 1) {
       level_count += 1;
