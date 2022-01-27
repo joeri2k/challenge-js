@@ -38,21 +38,19 @@ function PatternFunction() {
   } else {
     blue_audio.play();
   }
-  console.log(colors[random_number][0]);
-
   pattern.push(colors[random_number][0]);
-  console.log(pattern);
   setTimeout(function () {
     colors[random_number].removeClass("pressed");
   }, 150);
-  $(".container").one("click", GameFunction);
+  console.log(container[0]);
+  console.log($(".container"));
+  container[0].addEventListener("click", GameFunction);
 }
 
 // ----------- In Game Function ----------------
 var counter = 0;
 function GameFunction(event) {
-  console.log(counter);
-  console.log(pattern[counter].id);
+  console.log(event.target.id);
   if (event.target.id == pattern[counter].id) {
     if (counter == pattern.length - 1) {
       counter = 0;
