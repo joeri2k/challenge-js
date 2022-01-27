@@ -6,7 +6,6 @@ var red = $("#red");
 var yellow = $("#yellow");
 var blue = $("#blue");
 var container = $(".container");
-console.log(container);
 var colors = [green, red, yellow, blue];
 var pattern = [];
 // Audio
@@ -20,7 +19,6 @@ var lost_audio = new Audio("./sounds/wrong.mp3");
 $(document).on("keydown", function (event) {
   if (event.key && game == false) {
     title_msg.innerHTML = "Level " + level_count;
-    console.log("test");
     game = true;
     PatternFunction();
   }
@@ -43,14 +41,12 @@ function PatternFunction() {
   setTimeout(function () {
     colors[random_number].removeClass("pressed");
   }, 150);
-  console.log(container[0]);
-  container[0].addEventListener("click", GameFunction);
+  container[0].addEventListener("click", GameFunction); // i have a question
 }
 
 // ----------- In Game Function ----------------
 var counter = 0;
 function GameFunction(event) {
-  console.log(event.target.id);
   if (event.target.id == pattern[counter].id) {
     if (counter == pattern.length - 1) {
       counter = 0;

@@ -19,7 +19,6 @@ var lost_audio = new Audio("./sounds/wrong.mp3");
 document.addEventListener("keydown", function (event) {
   if (event.key && game == false) {
     title_msg.innerHTML = "Level " + level_count;
-    console.log("test");
     game = true;
     PatternFunction();
   }
