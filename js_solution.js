@@ -13,6 +13,7 @@ var yellow_audio = new Audio("./sounds/yellow.mp3");
 var blue_audio = new Audio("./sounds/blue.mp3");
 var lost_audio = new Audio("./sounds/wrong.mp3");
 
+// ------------ Start on keydown ------------------
 document.addEventListener("keydown", function (event) {
   if (event.key) {
     title_msg.innerHTML = "Level " + level_count;
@@ -21,6 +22,7 @@ document.addEventListener("keydown", function (event) {
   }
 });
 
+//------- Pattern Creator -------------------------
 function PatternFunction() {
   var random_number = Math.floor(Math.random() * 4);
   colors[random_number].classList.add("pressed");
@@ -40,6 +42,7 @@ function PatternFunction() {
   container[0].addEventListener("click", GameFunction);
 }
 
+// ----------- In Game Function ----------------
 var counter = 0;
 function GameFunction(event) {
   if (event.srcElement.id == pattern[counter].id) {
@@ -60,6 +63,8 @@ function GameFunction(event) {
     window.location.reload();
   }
 }
+
+// -----------On click functions for each button-------
 green.addEventListener("click", function () {
   green.classList.add("pressed");
   green_audio.play();
