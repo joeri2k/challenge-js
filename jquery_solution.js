@@ -60,6 +60,7 @@ function GameFunction(event) {
     }
   } else {
     lost_audio.play();
+    $("body").addClass("game-over");
     alert("You Lost!");
     window.location.reload();
   }

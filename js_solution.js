@@ -61,6 +61,7 @@ function GameFunction(event) {
     }
   } else {
     lost_audio.play();
+    document.getElementsByTagName("body").classList.add("game-over");
     alert("You Lost!");
     window.location.reload();
   }
