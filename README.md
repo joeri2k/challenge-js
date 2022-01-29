@@ -27,7 +27,7 @@ The Simon game is the exciting Web game of lights and sounds in which players mu
 - JavaScript
 - JQuery
 
-This project was solved using two methods: One with only JavaScript and the second using JQuery library
+This project was solved using two methods: One with JavaScript only and the second using JQuery library
 
 ---
 
@@ -40,3 +40,12 @@ This project was solved using two methods: One with only JavaScript and the seco
 3. Simon will add each round a signal. Keep following the patterns in the same order.
 
 4. If you fail to repeat the same pattern a buzz sound will come out meaning that you lost.
+
+---
+
+## Author Info
+
+- LinkedIn - [Joe Rizk](https://www.linkedin.com/in/joe-rizk-45b6651a3/)
+- Email - [joerizk2@hotmail.com](joerizk2@hotmail.com)
+
+[Back To The Top](#memory-challenge-game)
