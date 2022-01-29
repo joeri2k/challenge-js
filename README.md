@@ -11,6 +11,7 @@
 - [Description](#description)
 - [Technologies](#technologies)
 - [How To Use](#how-to-use)
+- [Author Info](#author-info)
 
 ---
 
