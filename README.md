@@ -46,6 +46,6 @@ This project was solved using two methods: One with JavaScript only and the seco
 ## Author Info
 
 - LinkedIn - [Joe Rizk](https://www.linkedin.com/in/joe-rizk-45b6651a3/)
-- Email - [joerizk2@hotmail.com](joerizk2@hotmail.com)
+- Email - [mailto](joerizk2@hotmail.com)
 
 [Back To The Top](#memory-challenge-game)
