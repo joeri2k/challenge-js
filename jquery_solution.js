@@ -41,7 +41,7 @@ function PatternFunction() {
   setTimeout(function () {
     colors[random_number].removeClass("pressed");
   }, 150);
-  container[0].addEventListener("click", GameFunction); // i have a question
+  container[0].addEventListener("click", GameFunction); //  question
 }
 
 // ----------- In Game Function ----------------
